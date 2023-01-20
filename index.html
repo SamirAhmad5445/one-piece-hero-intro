@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      sizes="32x32"
+      href="./images/favicon.png"
+      type="image/png"
+    />
+    <title>One Piece</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <header class="navigation">
+        <div class="navigation__logo">
+          <a href="#"
+            ><img
+              src="./images/one-piece-logo.png"
+              alt="One Piece Landing page"
+          /></a>
+        </div>
+        <nav class="navbar">
+          <button class="navbar__menu-toggle"><span></span></button>
+          <ul class="navbar__links">
+            <li><a href="#">home</a></li>
+            <li><a href="#">anime</a></li>
+            <li><a href="#">manga</a></li>
+            <li><a href="#">movis</a></li>
+          </ul>
+        </nav>
+        <div class="cta">
+          <button class="btn btn--neutral">log in</button>
+          <button class="btn btn--accent">sign up</button>
+        </div>
+      </header>
+      <section class="hero">
+        <div class="image-container">
+          <img src="./images/sunny.png" alt="thousand sunny go" />
+        </div>
+        <div class="content-container">
+          <h1>Strawhat Luffy is the man who will The Pirates King</h1>
+          <p>
+            join strowhat Luffy and his craw searhing for the One Piece by
+            wacthing the amine or reading the manga to enjoy the journy to the
+            last and the lost island laugh tale
+          </p>
+          <form class="email-input">
+            <input type="email" placeholder="Enter your email" />
+            <button class="btn" type="submit">join us</button>
+          </form>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
+            veniam laboriosam voluptatum, temporibus ad voluptates? Aspernatur
+            repellat quas consequuntur ducimus tenetur error autem minus
+            nesciunt!
+          </p>
+        </div>
+      </section>
+    </main>
+    <script>
+      let menuToggle = document.querySelector(".navbar__menu-toggle");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("opened");
+        document.documentElement.classList.toggle("deactivate-scroll");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+@use "sass:meta";
+@use "./breakpoints" as *;
+@use "./functions" as *;
+
+// @media query mixin
+@mixin media($point, $range: if($point == mobile, max, min)) {
+  // if $point is a kay in $breakpoints
+  @if map-has-key($breakpoints, $point) {
+    @media (#{$range}-width: get-point($point)) {
+      @content;
+    } // if not, is it a number
+  } @else if meta.type-of($point) == number {
+    @media (#{$range}-width: convert-unit($point)) {
+      @content;
+    }
+  } @else {
+    @error 'the mixin media() require a $key in the $breakpoints map Or a number by pixels';
+  }
+}
+
+@mixin flex-flow($gap: null) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $gap;
+}
+
+@mixin animate($name, $props) {
+  animation: $name $props;
+  @keyframes #{$name} {
+    @content;
+  }
+}

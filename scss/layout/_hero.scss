@@ -1,0 +1,50 @@
+@use "../abstracts" as *;
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include media(tablet, max) {
+    flex-direction: column;
+  }
+  > * {
+    flex: 1;
+  }
+}
+
+.image-container {
+  display: grid;
+  place-items: center;
+}
+img {
+  max-width: 60%;
+  // margin-inline: auto;
+}
+
+.content-container {
+  padding: size(3);
+  > * + * {
+    margin-block-start: var(--spacer, size(4));
+  }
+
+  h1 {
+    font-size: size(8);
+    background-image: linear-gradient(
+      to bottom right,
+      primary(2),
+      neutral(2),
+      neutral(3),
+      primary(3)
+    );
+    background-clip: text;
+    color: transparent;
+    @include media(tablet, max) {
+      text-align: center;
+    }
+  }
+
+  p {
+    font-size: calc(size(4) + size(1));
+    color: primary(3);
+  }
+}

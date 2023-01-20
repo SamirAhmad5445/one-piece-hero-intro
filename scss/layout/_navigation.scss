@@ -1,0 +1,143 @@
+@use "../abstracts" as *;
+
+html:is(:has(.opened), .deactivate-scroll) {
+  overflow: hidden;
+}
+
+.navigation {
+  // background-color: accent(1);
+
+  @include flex-flow();
+
+  // position: relative;
+  top: 0;
+  left: 0;
+
+  &__logo {
+    display: inline-block;
+    min-width: convert-unit(200px, rem);
+    padding: size(2) 0;
+    img {
+      height: size(8);
+      inset: 0;
+    }
+  }
+}
+
+.navbar {
+  @include flex-flow();
+
+  &__menu-toggle {
+    height: size(7);
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    display: grid;
+    place-items: center;
+    padding-bottom: size(3);
+    cursor: pointer;
+    span {
+      --toggle-color: #{primary(3)};
+      display: inline-block;
+      position: relative;
+      width: size(6);
+      height: size(1);
+      border-radius: 50vh;
+      background-color: var(--toggle-color, springgreen);
+      box-shadow: 0 size(2) 0 var(--toggle-color, hotpink),
+        0 calc(-1 * size(2)) 0 var(--toggle-color, royalblue);
+      transition: all 350ms;
+      isolation: isolate;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: transparent;
+        border-radius: inherit;
+        transition: all 350ms;
+      }
+    }
+    &:where(.opened) {
+      span {
+        background-color: transparent;
+        box-shadow: none;
+      }
+      span::before {
+        background-color: primary(2);
+        transform: rotate(-45deg);
+      }
+      span::after {
+        background-color: primary(2);
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__links {
+    display: none;
+    &:where(.opened + *) {
+      @include media(tablet, max) {
+        display: grid;
+        place-items: center;
+        padding-block: 5vmin;
+        position: absolute;
+        inset: 30% 20%;
+        background-color: neutral(1);
+        border-radius: size(2);
+        box-shadow: 0 0 0 100vh hsl(0 0% 0% / 0.25);
+        @include animate(fade-in, 600ms ease-in-out) {
+          from {
+            transform: translateY(calc(-1 * size(2)));
+            opacity: 0;
+          }
+          to {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      }
+    }
+    li {
+      width: 60%;
+      background-image: linear-gradient(to bottom right, primary(2), primary(2)),
+        linear-gradient(to bottom right, primary(2), primary(2));
+      background-repeat: no-repeat;
+      background-position: bottom left, top right;
+      background-size: 0% calc(size(1) * 0.5);
+      text-align: center;
+      text-transform: capitalize;
+      transition: background-size 300ms ease-in-out;
+      a {
+        display: inline-block;
+        margin: size(2);
+      }
+      &:hover {
+        background-size: 100% calc(size(1) * 0.5);
+        a {
+          color: primary(2);
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+  @include media(tablet) {
+    &__menu-toggle {
+      display: none;
+    }
+    &__links {
+      @include flex-flow($gap: size(3));
+      li:hover a {
+        // font-weight: 600;
+        color: primary(2);
+        transform: none;
+      }
+    }
+  }
+}
+
+.cta {
+  @include media(tablet, max) {
+    display: none;
+  }
+}

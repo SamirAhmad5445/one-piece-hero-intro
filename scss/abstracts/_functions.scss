@@ -1,0 +1,39 @@
+@use "sass:math";
+@use "./colors" as *;
+@use "./breakpoints" as *;
+
+@function convert-unit($num, $unit: em) {
+  @if type-of($num) != number {
+    @error '#{$num} is not a number';
+  } @else {
+    @if math.is-unitless($num) {
+      @return calc($num / 16) + $unit;
+    } @else {
+      @if str-slice(#{$num}, -2) != "px" {
+        @error 'only pixel values is accepted';
+      } @else {
+        @return str-slice(#{calc($num / 16)}, 1, -3) + $unit;
+      }
+    }
+  }
+}
+
+@function get-point($point) {
+  @return convert-unit(map-get($breakpoints, $point));
+}
+
+@function primary($key) {
+  @return var(--clr-primary-#{$key});
+}
+
+@function accent($key) {
+  @return var(--clr-accent-#{$key});
+}
+
+@function neutral($key) {
+  @return var(--clr-neutral-#{$key});
+}
+
+@function size($key) {
+  @return var(--size-#{$key});
+}

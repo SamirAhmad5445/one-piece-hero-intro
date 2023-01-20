@@ -1,0 +1,16 @@
+style.scss: table of content
+- abstracts 
+  - color-scheme
+  - functions
+  - mixins
+  - breakpoints
+- themes 
+  - light-theme
+  - dark-theme
+  - fancy theme 
+- layout 
+  - container
+  - global (+reset)
+  - base 
+- components
+button

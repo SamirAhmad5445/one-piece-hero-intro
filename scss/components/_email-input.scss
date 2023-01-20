@@ -1,0 +1,31 @@
+@use "../abstracts" as *;
+
+.email-input {
+  background-color: springgreen;
+
+  // margin-inline: size(6);
+  border: calc(0.5 * size(1)) solid primary(3);
+  border-radius: 50vh;
+  background-color: neutral(1);
+  overflow: hidden;
+  @include flex-flow();
+  input {
+    flex: 3;
+    border: none;
+    padding: size(3);
+    padding-inline-start: size(8);
+    background-color: inherit;
+    caret-color: primary(2);
+    outline: none;
+    &::placeholder {
+      color: primary(3);
+    }
+    &:focus-within::placeholder {
+      color: primary(2);
+    }
+  }
+  button {
+    flex: 1;
+  }
+  // width: 100%;
+}

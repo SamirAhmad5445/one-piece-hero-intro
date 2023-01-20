@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+:root {
+  @each $color, $shades in $colors {
+    /* color: #{$color} */
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+  /* Size system */
+  @each $size, $value in $sizes {
+    --size-#{$size}: #{$value};
+  }
+}
