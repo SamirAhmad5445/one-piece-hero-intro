@@ -23,8 +23,8 @@ Welcome I am [Samir Ahmad](samirahmad5445@gmail.com) and this is a simple Hero i
 
 ### Links
 
-- Solution URL: [link to the repo]()
-- Live Site URL: [link to github pages]()
+- Solution URL: [https://github.com/SamirAhmad5445/one-piece-hero-intro](https://github.com/SamirAhmad5445/one-piece-hero-intro)
+- Live Site URL: [https://samirahmad5445.github.io/one-piece-hero-intro/](https://samirahmad5445.github.io/one-piece-hero-intro/)
 
 ## Some Code Snippets
 
