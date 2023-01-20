@@ -1,4 +1,4 @@
-# Frontend Mentor - Tip calculator app solution
+# One Piece Hero Intro
 
 Welcome I am [Samir Ahmad](samirahmad5445@gmail.com) and this is a simple Hero intro for one of the best stories ever talled One Piece
 
