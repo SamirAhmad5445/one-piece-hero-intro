@@ -13,7 +13,7 @@ Welcome I am [Samir Ahmad](samirahmad5445@gmail.com) and this is a simple Hero i
   - [Function to Convert Units](#function-to-convert-units)
 - [Find Me on](#find-me-on)
   - [GitHub - @SamirAhmad5445](https://github.com/SamirAhmad5445)
-  - [Gmaill - samirahmad5445@gmail.com](samirahmad5445@gmail.com)
+  - [Gmaill - samirahmad5445@gmail.com](mailto:samirahmad5445@gmail.com)
 
 ## Overview
 
@@ -79,4 +79,4 @@ Welcome I am [Samir Ahmad](samirahmad5445@gmail.com) and this is a simple Hero i
 ## find me on
 
 - GitHub - [@SamirAhmad5445](https://github.com/SamirAhmad5445)
-- Gmaill - [samirahmad5445@gmail.com](samirahmad5445@gmail.com)
+- Gmaill - [samirahmad5445@gmail.com](mailto:samirahmad5445@gmail.com)
