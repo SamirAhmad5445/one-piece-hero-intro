@@ -44,7 +44,9 @@ img {
   }
 
   p {
+    padding-inline-start: size(3);
     font-size: calc(size(4) + size(1));
-    color: primary(3);
+    color: neutral(3);
+    opacity: 0.8;
   }
 }

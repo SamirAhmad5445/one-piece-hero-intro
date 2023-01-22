@@ -12,6 +12,11 @@ html {
   box-sizing: inherit;
 }
 
+::selection {
+  background-color: primary(1);
+  color: neutral(1);
+}
+
 body {
   background-color: neutral(1);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
